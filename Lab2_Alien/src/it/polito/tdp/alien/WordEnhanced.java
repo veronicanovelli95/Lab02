@@ -20,8 +20,8 @@ public class WordEnhanced {
 	public String getTranslation() {
 		String trad="";
 		for(String s: translation)
-			trad += s.toString();
-		return trad;
+			trad += s.toString() + " ";
+		return trad.trim();
 	}
 
 	public Boolean compare(String alien){

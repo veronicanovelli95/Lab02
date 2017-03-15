@@ -20,8 +20,8 @@ import javafx.scene.control.TextField;
 
 public class AlienController {
 	
-	private AlienDictionary ad;
-
+//	private AlienDictionary ad;
+	private AlienDictionary2 ad;
 	
 	
     @FXML
@@ -44,7 +44,11 @@ public class AlienController {
     	assert txtResult != null : "fx:id=\"txtResult\" was not injected: check your FXML file 'Alien.fxml'.";
     	assert btnTranslate != null : "fx:id=\"bntTranslate\" was not injected: check your FXML file 'Alien.fxml'.";
     	assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Alien.fxml'.";
-    	ad = new AlienDictionary();
+    
+//    	ad = new AlienDictionary();
+  	
+     	ad = new AlienDictionary2();
+    	
     }
   
     
@@ -53,9 +57,7 @@ public class AlienController {
     void doTranslate(ActionEvent event) {
     	String[] array = txtWord.getText().split(" ");
     	
-//    	txtResult.setText(array[0]  + "\n");
-//    	txtResult.appendText(array[1] + "\n");
-    	
+  
     	int i = array.length;
     	
     	if(array[0].matches("[A-Za-z]*")){

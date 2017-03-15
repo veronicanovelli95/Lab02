@@ -24,5 +24,8 @@ public class Parole {
 		String b = this.alienWord.toLowerCase();
 		return a.equals(b);
 	}
-
+	public void aggiungiTraduzione(String translation2) {
+		translation = translation2;
+		
+	}
 }
