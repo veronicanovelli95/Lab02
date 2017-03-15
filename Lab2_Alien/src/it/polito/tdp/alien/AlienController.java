@@ -60,17 +60,21 @@ public class AlienController {
     	
     	if(array[0].matches("[A-Za-z]*")){
     		txtResult.appendText("Match");
+    		txtWord.clear();
     	} else {
     		txtResult.appendText("Do not match");
+    		txtWord.clear();
     		return;
     	}
     	
     	if(i==1){
     		String traduzione = ad.translateWord(array[0]);
-    		txtResult.setText("traduzione "+traduzione);
+    		txtResult.setText("Traduzione: "+traduzione);
+    		txtWord.clear();
     	} else if(i==2){
     		ad.addWord(array[0], array[1]);
     		txtResult.setText(array[1]);
+    		txtWord.clear();
     	}
  
        
