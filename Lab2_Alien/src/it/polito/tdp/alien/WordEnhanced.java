@@ -12,18 +12,18 @@ public class WordEnhanced {
 	}
 
 	public String getAlienWord() {
+	
 		return alienWord;
 	}
 
 
 	public String getTranslation() {
-		StringBuilder sb = new StringBuilder();
+		String trad="";
 		for(String s: translation)
-			sb.append(translation.toString());
-		return sb.toString();
+			trad += s.toString() + " ";
+		return trad.trim();
 	}
 
-	
 	public Boolean compare(String alien){
 		String a = alien.toLowerCase();
 		String b = this.alienWord.toLowerCase();
@@ -34,5 +34,11 @@ public class WordEnhanced {
 		translation.add(translation2);
 		
 	}
+	public boolean compareWild(String alienWild) {
+		if (alienWord.matches(alienWild))
+			return true;
+		return false;
+	}
+
 
 }

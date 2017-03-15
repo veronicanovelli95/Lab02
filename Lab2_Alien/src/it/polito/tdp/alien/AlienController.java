@@ -60,36 +60,29 @@ public class AlienController {
   
     	int i = array.length;
     	
-    	if(array[0].matches("[a-zA-Z]*")){
+    	if(array[0].matches("[A-Za-z?]*")){
     		txtResult.appendText("La prima parola è in un formato valido\n");
-    		txtWord.clear();	} 
-    	else {
+    		txtWord.clear();
+    	} else {
     		txtResult.appendText("La prima parola è in un formato non valido\n");
     		txtWord.clear();
-    		return;}
+    		return;
+    	}
     	
-    	if(array[1].matches("[a-zA-Z]*")){
-    		txtResult.appendText("La seconda parola è in un formato valido");
-    		txtWord.clear();} 
-    	else {
-    		txtResult.appendText("La seconda parola è in un formato non valido");
-    		txtWord.clear();
-    		return;}
+    	
+  
     	
     	
     	if(i==1){
     		String traduzione = ad.translateWord(array[0]);
     		txtResult.setText("Traduzione: "+traduzione);
-    		txtWord.clear();} 
-    	
-    	else if(i==2){
+    		txtWord.clear();
+    	} else if(i==2){
     		ad.addWord(array[0], array[1]);
     		txtResult.setText(array[1]);
-    		txtWord.clear();}
-    	else if(i==0)
-    		txtResult.setText("Inserire una o due parole");
-    	else if(i>2)
-    		txtResult.setText("Formato non valido");
+    		txtWord.clear();
+    	}
+ 
        
     }
     
